@@ -195,3 +195,29 @@
   }
 }
 
+@media (max-width: 630px) {
+
+  .item {
+    width: 100px;
+    height: 100px;
+  }
+
+  .number {
+    font-size: 25px;
+  }
+
+}
+
+@media (max-width: 486px) {
+
+  .item {
+    width: 50px;
+    height: 50px;
+  }
+
+  .number {
+    font-size: 15px;
+  }
+
+}
+
