@@ -2,11 +2,17 @@ import { useState, useCallback, useEffect } from "react";
 import Item from "./components/Item";
 
 const colorList = ["one", "two", "three", "four", "five"];
+const initialNumber = 1;
+const initialColors = ["one", "two", "three"];
+
+const saveInStorage = (key, arr) => {
+  localStorage.setItem(key, JSON.stringify(arr));
+};
 
 export default function App() {
   const [numbers, setNumbers] = useState([0, 1, 1]);
-  const [number, setNumber] = useState(1);
-  const [colors, setColors] = useState(["one", "two", "three"]);
+  const [number, setNumber] = useState(localStorage.getItem('number') ? JSON.parse(localStorage.getItem('number')) : initialNumber);
+  const [colors, setColors] = useState(localStorage.getItem('colors') ? JSON.parse(localStorage.getItem('colors')) : initialColors);
 
   const getNextNumber = () => {
     setNumber(number + 1);
@@ -42,7 +48,12 @@ export default function App() {
     }
 
     setNumbers([...cache, cache[0] + cache[1]]);
+    saveInStorage("number", number);
   }, [number]);
+
+  useEffect(() => {
+    saveInStorage("colors", colors);
+  }, [colors]);
 
   useEffect(() => {
     setArray();
