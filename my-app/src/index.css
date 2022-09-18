@@ -35,6 +35,26 @@
   box-shadow: 0px 8px 5px -4px rgba(34, 60, 80, 0.6);
 }
 
+.one {
+  background-color: #F78888;
+}
+
+.two {
+  background-color: #F3D250;
+}
+
+.three {
+  background-color: #FBE8A6;
+}
+
+.four {
+  background-color: #90CCF4;
+}
+
+.five {
+  background-color: #5DA2D5;
+}
+
 .number {
   font-size: 40px;
   white-space: nowrap;
