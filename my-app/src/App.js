@@ -58,8 +58,16 @@ export default function App() {
           }
         </div>
         <div className="navigation">
-          <button className="arrow" onClick={getPrewNumber}>-</button>
-          <button className="arrow" onClick={getNextNumber}>+</button>
+          {number > 1 ? (<button className="arrow" onClick={getPrewNumber}>
+            <div className="arrow-move arrow-move-left">
+              <div></div>
+            </div>
+          </button>) : (<div></div>)}
+          <button className="arrow" onClick={getNextNumber}>
+            <div className="arrow-move">
+              <div></div>
+            </div>
+          </button>
         </div>
       </div>
     </div>
