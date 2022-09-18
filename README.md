@@ -16,7 +16,7 @@
 
 HTML, CSS, JavaScript, React JS
 
-## Настройка проекта
+## Запуск проекта
 
 ```
 cd my-app
